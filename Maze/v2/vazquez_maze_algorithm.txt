@@ -1,0 +1,40 @@
+Algorith for vazquez_maze_v*.**.py
+Author: Daniel Vazquez
+
+1) Maze Generation
+    a) Create a rectangular grid where the maze will be generated.
+        I) Initialize a 2D array full of spaces.
+    b) Initialize the walls.
+        I) The positioning of the walls will be decided through
+           booleans. If there is a 1 between two vertexes, an 'M' will
+           be placed between the vertexes. If there is a 0, a space
+           will be placed in between instead.
+    c) Define the borders as 'M's.
+        I) Once walls and paths are initialized and ready, 2 lists
+           full of 'M's will be added to the 2D array. One at the 
+           beginning and one at the end. These will be upper and lower
+           borders.
+       II) To 'M's will be added to every list in between those two
+           lists. One will be added at the front, another at the end.
+           These will be the side borders.
+2) Maze Traversing
+    a) Start at the top left corner. The end is at the bottom right
+       corner.
+    b) Use 4 different keys (ex. U for up, D for down, R for right, and
+       L for left) to traverse the maze.
+        I) The players position will be marked by the plus sign (+).
+       II) Once the player chooses moves to a different vertex in the
+           maze, a plus sign will be printed on the players new
+           position.
+      III) If there is already a + sign where the player chooses to go,
+           meaning that the player has already been in that vertex
+           before (i.e. player is moving back), the + sign at the
+           vertex where the player is moving from will be changed for
+           a 0.
+       IV) If there is an 'M' in a vertex, its content cannot be
+           changed for a + or a space. It is a wall.
+3) Displaying the maze
+    a) If displayed in the command prompt, cmd screen will be refreshed
+       every time the player makes a move to prevent the maze printing
+       again and again flooding the terminal.
+    b) If displayed with fancy graphics... TBD.
